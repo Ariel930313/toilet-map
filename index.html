@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <title>Toilet Map</title>
+  <meta charset="UTF-8">
+  <title>教師排課表抽選</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Welcome to Toilet Map 🚻</h1>
-  <p>這是我的第一個 GitHub Pages 網頁！</p>
+  <div class="container">
+    <h1>教師排課表抽選</h1>
+    <div class="buttons">
+      <button onclick="drawTeacher()">抽教師排入時段</button>
+      <button onclick="resetDraw()">重置</button>
+    </div>
+    <p id="result">尚未抽選</p>
+
+    <h2>課表</h2>
+    <table id="scheduleTable">
+      <thead>
+        <tr>
+          <th>時段</th>
+          <th>教師</th>
+        </tr>
+      </thead>
+      <tbody id="scheduleBody">
+        <!-- 動態生成 -->
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
